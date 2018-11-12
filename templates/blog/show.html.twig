@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Show{% endblock %}
+
+{% block body %}
+
+    {% if article is null %}
+        <h1>Aucun article selectionné.</h1>
+    {% else %}
+        <h4>Titre : {{ article.title }}</h4> <br />
+        <p>Description : {{ article.content }}</p> <br />
+        <p>Catégorie : {{ article.category.name }}</p>
+    {% endif %}
+{% endblock %}
